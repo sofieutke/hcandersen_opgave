@@ -1,0 +1,186 @@
+/************ Reset ***************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/********** header *******/
+  header {
+      position: relative;             
+      height: 110px;
+      background-color: #f5f5f5; 
+    }
+
+    header img {
+      width: 65px;               
+      height: 80px;
+      border-radius: 50%;        
+      margin-left: 15px;    
+      margin-top: 10px; 
+    }
+
+    .header-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        font-family: 'Patrick Hand', serif;
+        font-size: 1.4rem;
+        color: #666565;
+        letter-spacing: 2px;
+    }
+
+/******* explainer video link ******/
+.video-section {
+  width: 100%;
+  margin-top: 0;
+  padding: 0;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 400px; 
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover; 
+}
+
+/***** SVG kort *******/
+.map-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.map-wrapper {
+    position: relative;
+    transform: rotate(1deg) scale(1.05);
+}
+
+.svg-map {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/********* Hover på billeder på svg kort *****/
+.map-point {
+   position: absolute;
+      cursor: pointer;
+      border: 1px solid rgb(255, 255, 255); /* Bare for at kunne se punktet */
+      border-radius: 50%;
+}
+ 
+.point-1 {
+    width: 131px; height: 130px;
+     transform: translate(-53%, -50%);
+} 
+
+.point-2 {
+    width: 133px; height: 130px;
+     transform: translate(-52%, -50%);
+}
+.point-3 {
+    width: 133px; height: 128px;
+     transform: translate(-50%, -58%);
+}
+.point-4 {
+   width: 131px; height: 130px;
+     transform: translate(-46%, -57%); 
+}
+
+/************ Tooltip ***************/
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 53%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+/***** Billedet i tooltip *****/
+.tooltip img {
+  width: 150px;
+  height: 160px;
+  border-radius: 50%;
+  background: #1b672b; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ .map-point:hover .tooltip {
+      display: block;
+    }
+
+.tooltip.active {
+    display: block !important;
+}
+
+
+/*** tooltip-knap ********/
+.tooltip-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  display: none; 
+}
+
+/***** Tekst under billedet *******/
+.tooltip p {
+  margin: 0;
+  font-size: 14px;
+  color: #fff;
+  background-color: rgb(47, 107, 47);
+}
+
+/***** placeringer for map ******/
+.point-1 { top: 25%; left: 42%; }
+.point-2 { top: 60%; left: 23%; }
+.point-3 { top: 44%; left: 76%; }
+.point-4 { top: 80%; left: 60%; }
+
+/**** media for mobil *****/
+@media (max-width: 600px) {
+  .map-point { width: 48px; height: 48px; }              
+  .tooltip { padding: 6px; font-size: 14px; }
+  
+  .map-point:hover .tooltip {
+    display: none;
+  }
+
+   .tooltip img {
+    width: 90px;   
+    height: 90px;
+  }
+  .tooltip p {
+    font-size: 12px; 
+    padding: 4px 6px; 
+  }
+    .header-text {
+    font-size: 1rem;
+    letter-spacing: 0.1em; 
+  }
+  .tooltip-btn {
+    display: block; 
+  }
+}
+
+
