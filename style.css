@@ -157,21 +157,6 @@
 .point-3 { top: 44%; left: 76%; }
 .point-4 { top: 80%; left: 60%; }
 
-/********* Meta ad styling billeder *******/
-.meta-container {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.meta-container img {
-  max-width: 100%;
-  height: auto;
-}
-
 /**** media for mobil *****/
 @media (max-width: 600px) {
   .map-point { width: 48px; height: 48px; }              
@@ -195,11 +180,6 @@
   }
   .tooltip-btn {
     display: block; 
-  }
-  .meta-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
   }
 }
 
